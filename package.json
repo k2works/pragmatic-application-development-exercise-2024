@@ -71,6 +71,7 @@
     ]
   },
   "dependencies": {
-    "http-server": "^14.1.1"
+    "http-server": "^14.1.1",
+    "vercel": "^33.4.1"
   }
 }
