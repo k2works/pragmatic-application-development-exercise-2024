@@ -4,7 +4,22 @@ export class App {
     console.log("App initialized");
     document.getElementById("app").innerHTML = `
     <body>
-      <h1>Todo App</h1>
+    <div class="todoapp">
+      <form id="js-form">
+        <input
+          id="js-form-input"
+          class="new-todo"
+          type="text"
+          placeholder="What need to be done?"
+          autocomplete="off"
+        />
+      </form>
+      <div id="js-todo-list" class="todo-list">
+      </div>
+      <footer class="footer">
+        <span id="js-todo-count">Todoアイテム数: 0</span>
+      </footer>
+    </div>
     </body>
     `;
   }
