@@ -1,6 +1,7 @@
 import "./style.css";
 import { App } from "./app.js";
 const app = new App();
+app.mount();
 
 import render from "@k2works/full-stack-lab";
 
