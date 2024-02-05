@@ -9,7 +9,6 @@ export class App {
 
   constructor() {
     document.getElementById("app").innerHTML = `
-    <body>
     <div class="todoapp">
       <form id="js-form">
         <input
@@ -27,7 +26,6 @@ export class App {
         <span id="js-todo-count">Todoアイテム数: 0</span>
       </footer>
     </div>
-    </body>
     `;
   }
 
