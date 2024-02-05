@@ -1,6 +1,6 @@
 # 実践アプリケーション開発
 
-[![Node.js CI](https://github.com/k2works/intercept-booster-sample/actions/workflows/node.js.yml/badge.svg)](https://github.com/k2works/intercept-booster-sample/actions/workflows/node.js.yml)
+[![Node.js CI](https://github.com/k2works/pragmatic-application-development-exercise-2024/actions/workflows/node.js.yml/badge.svg)](https://github.com/k2works/pragmatic-application-development-exercise-2024/actions/workflows/node.js.yml)
 
 ## 概要
 
