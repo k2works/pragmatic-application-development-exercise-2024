@@ -239,3 +239,6 @@ dist
 .vercel
 
 public
+docs/.asciidoctor
+docs/*.png
+docs/*.svg
