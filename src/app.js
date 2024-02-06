@@ -67,7 +67,7 @@ export class App {
         },
         onDeleteTodo: ({ id }) => {
           this.handleDelete({ id });
-        }
+        },
       });
       render(todoListElement, containerElement);
       todoItemCountElement.textContent = `Todoアイテム数: ${this.#todoListModel.getTotalCount()}`;
