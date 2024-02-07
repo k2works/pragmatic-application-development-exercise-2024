@@ -4,7 +4,7 @@
 
 ## 概要
 
-intercept-boosterのサンプルです。
+[ガイドライン](./docs/slides/PITCHME.md)
 
 ### 目的
 
@@ -18,16 +18,17 @@ intercept-boosterのサンプルです。
 
 ```bash
 npm i @k2works/intercept-booster
-npx npx intercept-booster
+npx intercept-booster
 npm install
 npm start
 ```
 ## 構成
 
+- [要件](./docs/req.adoc)
+- [開発](./docs/dev.adoc)
 - [構築](./docs/build.adoc)
 - [配置](./docs/ship.adoc)
 - [運用](./docs/run.adoc)
-- [開発](./docs/dev.adoc)
 
 ## 参照
 
