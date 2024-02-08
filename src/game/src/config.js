@@ -1,6 +1,5 @@
 // 設定を記載しておくクラス
-class Config {
-}
+export class Config {}
 Config.puyoImgWidth = 40; // ぷよぷよ画像の幅
 Config.puyoImgHeight = 40; // ぷよぷよ画像の高さ
 
@@ -11,11 +10,12 @@ Config.stageRows = 12; // ステージの縦の個数
 
 // フィールドサイズ追加
 // 高さが全部入るように調整
-Config.puyoImgHeight = (window.innerHeight-Config.fontHeight)/Config.stageRows
+Config.puyoImgHeight =
+  (window.innerHeight - Config.fontHeight) / Config.stageRows;
 Config.puyoImgWidth = Config.puyoImgHeight;
 
-Config.stageBackgroundColor = '#ffffff'; // ステージの背景色
-Config.scoreBackgroundColor = '#24c0bb'; // スコアの背景色
+Config.stageBackgroundColor = "#ffffff"; // ステージの背景色
+Config.scoreBackgroundColor = "#24c0bb"; // スコアの背景色
 
 Config.freeFallingSpeed = 16; // 自由落下のスピード
 Config.erasePuyoCount = 4; // 何個以上揃ったら消えるか
