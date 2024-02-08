@@ -1,8 +1,16 @@
-import { Game } from "./game/src/game.js";
-
-export class App {
-  constructor() {
-    document.getElementById("app").innerHTML = `
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <title>ぷよぷよプログラミングを体験してみよう！</title>
+    <script type="module" src="src/game.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+    </script>
+</head>
+    <body style="margin:0;">
         <!-- <div id="stage" style="position:absolute; left: 0; top: 0; overflow: hidden;"></div> -->
         <div id="stage" style="position:relative; margin: 0 auto; overflow: hidden;background: url(img/puyo_1bg.png)"></div>
         <!-- <div id="score" style="position:absolute; left: 0; top: 0; overflow: hidden; text-align: right;"></div> -->
@@ -26,6 +34,5 @@ export class App {
             <img src="img/8.png" id="font8">
             <img src="img/9.png" id="font9">
         </div>
-    `;
-  }
-}
+    </body>
+</html>

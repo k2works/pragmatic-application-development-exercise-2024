@@ -1,4 +1,8 @@
-import "./style.css";
+function importAll(r) {
+  return r.keys().map(r);
+}
+const images = importAll(require.context("./game/img", false, /\.png$/));
+import "./game/css/style.css";
 import { App } from "./app.js";
 const app = new App();
 

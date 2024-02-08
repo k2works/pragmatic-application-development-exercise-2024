@@ -18,6 +18,7 @@ module.exports = {
   output: {
     path: __dirname + "/public",
     filename: "bundle.js",
+    assetModuleFilename: "img/[name][ext]"
   },
   resolve: {
     extensions: [".ts", ".tsx", ".js"],
@@ -51,6 +52,10 @@ module.exports = {
             },
           },
         ],
+      },
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        type: "asset/resource",
       },
     ],
   },
