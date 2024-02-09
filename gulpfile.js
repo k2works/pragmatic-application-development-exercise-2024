@@ -1,6 +1,7 @@
 const { series, parallel, watch, src, dest } = require("gulp");
 const { default: rimraf } = require("rimraf");
 const browserSync = require('browser-sync').create();
+const shell = require('gulp-shell');
 
 const asciidoctor = {
   clean: async (cb) => {
@@ -20,6 +21,7 @@ const asciidoctor = {
 
     const inputRootDir = "./docs";
     const outputRootDir = "./public/docs";
+
     const fileNameList = fs.readdirSync(inputRootDir);
     const docs = fileNameList.filter(RegExp.prototype.test, /.*\.adoc$/);
 
@@ -52,23 +54,33 @@ const asciidoctor = {
   },
 }
 
-marp = {
+const marp = {
   build: (cb) => {
     const { marpCli } = require('@marp-team/marp-cli')
+    const inputRootDir = "./docs/slides";
+    const outputRootDir = "./public/docs/slides";
 
-    marpCli(['./docs/slides/PITCHME.md', '--html', '--output', './public/slides/index.html'])
+    marpCli([
+      `${inputRootDir}/PITCHME.md`,
+      "--html",
+      "--output",
+      `${outputRootDir}/index.html`,
+    ])
       .then((exitStatus) => {
         if (exitStatus > 0) {
-          console.error(`Failure (Exit status: ${exitStatus})`)
+          console.error(`Failure (Exit status: ${exitStatus})`);
         } else {
-          console.log('Success')
+          console.log("Success");
         }
       })
-      .catch(console.error)
+      .catch(console.error);
+
+    src(`${inputRootDir}/images/*.*`).pipe(dest(`${outputRootDir}/images`));
+
     cb();
   },
   clean: async (cb) => {
-    await rimraf("./public/slides");
+    await rimraf("./public/docs/slides");
     cb();
   },
   watch: (cb) => {
