@@ -1,13 +1,12 @@
-import "./style.css";
-import { App } from "./app.js";
+import "./src/style.css";
+import { App } from './src/app';
 const app = new App();
 
-import render from "@k2works/full-stack-lab";
-
+const dev = require('@k2works/full-stack-lab');
 const contents = `
 ## 機能名
-## TODOリスト
 ## 仕様
+## TODOリスト
 `;
 
 const usecase = `
@@ -75,7 +74,7 @@ const ui = `
   }
 }
 @endsalt
-`;
+`
 
 const uiModel = `
 @startuml
@@ -118,7 +117,7 @@ const uiModel = `
   部 *-- 教員
   イベント *- 教員
   生徒 --* 組
-`;
+`
 
 const uiInteraction = `
 @startuml
@@ -135,7 +134,7 @@ const uiInteraction = `
   部_コレクション --> 部_シングル
   部_シングル --> 生徒_コレクション
 @enduml
-`;
+`
 
 const uml = `
 @startuml
@@ -190,5 +189,5 @@ e01 |o..o{ e03
 @enduml
 `;
 
-const mode = "APP"; // "UI" or "API" or "DOC"
-render({ contents, ui, uiModel, uiInteraction, usecase, uml, erd, mode });
+const mode = "APP"; // "UI" or "API"
+dev.default({ contents, ui, uiModel, uiInteraction, usecase, uml, erd, mode });
