@@ -1,8 +1,9 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require("webpack");
 
-const env = process.env.NODE_ENV || 'development';
-const isDevelopment = env === 'development';
+const env = process.env.NODE_ENV || "development";
+const isDevelopment = env === "development";
 
 module.exports = {
   mode: env,
@@ -21,6 +22,11 @@ module.exports = {
   },
   resolve: {
     extensions: [".ts", ".tsx", ".js"],
+  },
+  externals: {
+    jquery: "$",
+    lodash: "_",
+    moment: "moment",
   },
   module: {
     rules: [
@@ -58,6 +64,15 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: "index.html",
+    }),
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery",
+      "window.$": "jquery",
+      _: "lodash",
+      "window._": "lodash",
+      moment: "moment",
+      "window.moment": "moment",
     }),
   ],
 };
