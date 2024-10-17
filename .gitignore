@@ -242,3 +242,6 @@ public
 docs/.asciidoctor
 docs/*.png
 docs/*.svg
+
+build
+.gradle

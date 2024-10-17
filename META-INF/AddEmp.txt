@@ -1,0 +1,3 @@
+AddEmp 1 "Bob" "Home" S 1000.00
+AddEmp 2 "Bill" "Home" H 15.25
+AddEmp 3 "Lance" "Home" C 2500.0 3.2
